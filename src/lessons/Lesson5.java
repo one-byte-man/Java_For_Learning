@@ -1,5 +1,4 @@
 package lessons;
-import java.util.Scanner;
 
 public class Lesson5 {
 
@@ -18,37 +17,95 @@ public class Lesson5 {
 		 * - break    : Exits the loop immediately.
 		 * - continue : Skips the current iteration and moves to the next.
 		 */
+
 		
-		Scanner input = new Scanner(System.in);
-		
-		
-		// ---------------------------------------------------
 		// FOR
+		// ---------------------------------------------------
+		System.out.println("FOR");
 		
 		for (int i = 0; i < 5; i++) {
 		    System.out.println("Number: " + i);
 		}
-		
+		System.out.println("*************************");
+
+		// WHILE
 		// ---------------------------------------------------
-		// While
+		System.out.println("WHILE");
 		
-		System.out.println("Enter grade ('-1' Exiting):");
-		int grade = input.nextInt();
-		int totalGrade = 0;
-		int grades = 0;
-		
-		while (grade != -1) {
-			totalGrade += grade;
-			grades += 1;
-			
-			System.out.println("Enter grade ('-1' Exiting):");
-			grade = input.nextInt();
+		int i = 0;
+		while(i < 5) {
+			System.out.println("Number: " + i);
+			i++;
 		}
 		
-		float average = totalGrade/grades;
-		System.out.printf("Total grades: %d%n", totalGrade);
-		System.out.printf("Number of grades: %d%n", grades);
-		System.out.printf("Average grade: %.2f%n", average);
-	}
+		System.out.println("*************************");
+		
+		// DO WHILE
+		// ---------------------------------------------------
+		System.out.println("DO WHILE");
+		
+		int k = 0;
+		do {
+			System.out.println("Number: " + k);
+			k++;
+		}while(k < 5);
+		
+		System.out.println("*************************");
+		// EXERCISES
+		// ---------------------------------------------------
+		System.out.println("EXERCISES");
+		
+		int NUM = 11;
+		for (int j = NUM; j > 0; j--) {
+			for(int l = NUM - j; l > 0; l--) {
+				System.out.print(" ");
+			}
+			for(int l = j; l > 0; l--) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		for (int j = NUM; j > 0; j--) {
+			for(int l = j; l > 0; l--) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		for (int j = NUM; j > 0; j-=2) {
+			for(int l = (NUM - j)/2; l > 0; l--) {
+				System.out.print(" ");
+			}
+			for(int l = j; l > 0; l--) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		for (int j = NUM; j > 0; j-=2) {
+			for(int l = (NUM - j)/2; l > 0; l--) {
+				System.out.print("*");
+			}
+			for(int l = j; l > 0; l--) {
+				System.out.print(" ");
+			}
+			for(int l = 11; l > j; l-=2) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
 
+		for (int j = NUM; j > 0; j-=2) {
+			for(int l = j/2; l > 0; l--) {
+				System.out.print(" ");
+			}
+			for(int l = (NUM-j)+1; l > 0; l--) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+
+		
+	}
 }

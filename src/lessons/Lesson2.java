@@ -4,12 +4,11 @@ public class Lesson2 {
 
 	public static void main(String[] args) {
 		/**
-		 // OPERATORS  
-		 * | Category          | Operator | Description                | Example (a=10, b=20) |
+		 * | Category          | Operator | Description                  | Example (a=10, b=20) |
 		 * |-------------------|----------|------------------------------|----------------------|
 		 * | Arithmetic        | +        | Addition                     | a + b = 30           |
 		 * |                   | -        | Subtraction                  | a - b = -10          |
-		 * |                   | * 		  | Multiplication               | a * b = 200          |
+		 * |                   | * | Multiplication               | a * b = 200          |
 		 * |                   | /        | Division                     | b / a = 2            |
 		 * |                   | %        | Modulus (Remainder)          | b % a = 0            |
 		 * |                   | ++       | Increment                    | a++ (a becomes 11)   |
@@ -28,13 +27,18 @@ public class Lesson2 {
 		 * |                   | >=       | Greater than or equal to     | a >= 10 (true)       |
 		 * |                   | <=       | Less than or equal to        | b <= 20 (true)       |
 		 * |-------------------|----------|------------------------------|----------------------|
-		 * | Logical           | &&       | Logical AND                  | (a < b && a > 5) T   |
-		 * |                   | ||       | Logical OR                   | (a > b || a > 5) T   |
-		 * |                   | !        | Logical NOT                  | !(a < b) F           |
-		 * 
-		 * Not: '+' işareti ayrıca char ve stringleri birleştimke içinde kullanılarbirlir
-		 * "Ahmet" + 'A' = AhmetA
-		 * "Ahmet" + 100 = Ahmet100
+		 * | Logical           | &&       | Conditional AND (Short-ckit) | (a < b && b > 15) T  |
+		 * | (Conditional)     | ||       | Conditional OR (Short-ckit)  | (a > b || a == 10) T |
+		 * |                   | !        | Logical Negation (NOT)       | !(a < b) F           |
+		 * |-------------------|----------|------------------------------|----------------------|
+		 * | Boolean Logical   | &        | Boolean Logical AND          | (true & false) F     |
+		 * | (Full Evaluation) | |        | Boolean Logical Inclusive OR | (true | false) T     |
+		 * |                   | ^        | Boolean Logical Exclusive OR | (true ^ true) F      |
+		 * * Notes:
+		 * 1. The '+' operator is also used for string concatenation: "Ahmet" + 100 = "Ahmet100"
+		 * 2. Short-Circuit (&&, ||): If the first operand determines the result, the second is not evaluated.
+		 * 3. Boolean (&, |): Always evaluates both operands (also used for bitwise operations).
+		 * 4. XOR (^): Returns 'true' only if the operands are different.
 		 */
 		
 		int a = 50;
@@ -98,6 +102,14 @@ public class Lesson2 {
 		
 		int num = 10;
 		System.out.println((num >= 10) && (10 - 5) < 10); // T
+		
+		// Boolean Logical Operators
+		int num2 = 5;
+		
+		if(num2 > 10 && ++num2 > 10) {}	//The second condition does not run. num2 is still 5
+		System.out.println(num2);
+		if(num2 > 10 & ++num2 > 10) {}	//The second condition runs. num2 will be 6
+		System.out.println(num2);
 		
 		
 		

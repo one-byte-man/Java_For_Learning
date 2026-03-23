@@ -79,6 +79,8 @@ public class Lesson3 {
 		System.out.println("Enter a number: ");
 		int number = input.nextInt(); // Read first number
 		System.out.printf("Entered number is : %d%n",number);
+		
+		input.close();
 
 	}
 

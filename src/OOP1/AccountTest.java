@@ -28,6 +28,8 @@ public class AccountTest {
 		System.out.printf("1.Your age is: %d%n",Account_1.getAge());
 		System.out.printf("2.Your age is: %d%n",Account_2.getAge());
 		System.out.printf("3.Your age is: %d%n",Account_3.getAge());
+		
+		input.close();
 
 	}
 
