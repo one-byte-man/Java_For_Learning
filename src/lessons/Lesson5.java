@@ -51,6 +51,22 @@ public class Lesson5 {
 		}while(k < 5);
 		
 		System.out.println("*************************");
+		
+		
+		//break
+		System.out.println("BREAK");
+		for (int num = 0; num < 10; num++) {
+			if (num == 5) break; // terminte the for when num equal to 5
+			System.out.println("Number: " + num);
+		}
+		
+		//continue
+		System.out.println("CONTINUE");
+		for (int num = 0; num < 10; num++) {
+		    if (num % 2 == 0) continue; //do not write even numbers, just odd numbers
+		    System.out.println("Number: " + num);
+		}
+		System.out.println("*************************");
 		// EXERCISES
 		// ---------------------------------------------------
 		System.out.println("EXERCISES");
