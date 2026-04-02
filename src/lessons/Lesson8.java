@@ -1,4 +1,6 @@
 package lessons;
+import java.util.Scanner;
+import java.security.SecureRandom;
 
 public class Lesson8 {
 
@@ -71,8 +73,29 @@ public class Lesson8 {
         int powerInt = (int) Math.pow(3, 2);       
         System.out.println(powerInt);
        
+        int begin,end;
+        Scanner scanner = new Scanner(System.in);
+        SecureRandom sRandom = new SecureRandom();
         
-        //I will continue from here
+        System.out.println("Enter the begining number:");
+        begin = scanner.nextInt();
+        System.out.println("Enter the ending number:");
+        end = scanner.nextInt();
+        
+        for (int count = 1; count < 21; count++) {
+        	
+        	int number = begin + sRandom.nextInt(end + 1);
+        	number = (number > end) ? (begin + number % end) : number;
+        	
+        	System.out.printf("%d ",number);
+        	
+        	if(count % 5 == 0) {
+        		System.out.print("\n");
+        	}
+        }
+        
+        
+
 	}
 
 }
