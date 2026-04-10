@@ -26,6 +26,17 @@ This repository documents my progress in **Java SE 21** and **Object-Oriented Pr
   - Loop control keywords: `break` and `continue`.
   - Nested loops and algorithmic pattern exercises.
 
+### 🧱 Core Data Structures & Error Handling
+
+- [x] **Lesson 9: Arrays**
+  - Fixed-size arrays, `length`, and literal initialization.
+  - Default values, bounds, and reference-copy behavior.
+  - `SecureRandom`-based grade distribution and histogram output.
+- [x] **Lesson 10: Exception Handling**
+  - `try`, `catch`, and `finally` flow control.
+  - Specific exception handling: `InputMismatchException`, `ArrayIndexOutOfBoundsException`, and `ArithmeticException`.
+  - Cleanup patterns and safe resource closing.
+
 ### 🛠️ Advanced Logic & Utility (Lessons 7-8)
 
 - [x] **Lesson 7: Char & Number Mapping**
@@ -47,23 +58,29 @@ This repository documents my progress in **Java SE 21** and **Object-Oriented Pr
 - [x] **Constructors:** Default vs. Parameterized constructors and **Constructor Overloading**.
 - [x] **The `this` Keyword:** Eliminating shadowing between fields and parameters.
 
+### 🃏 Object-Oriented Programming (OOP2)
+
+- [x] **Card Class:** Encapsulating card face and suit data with `toString()` support.
+- [x] **DeckOfCard:** Building a 52-card deck, shuffling with `SecureRandom`, and dealing cards.
+- [x] **TestCards:** Deck initialization and formatted card output in rows.
+
 ## 🗺️ Roadmap (Upcoming Topics)
 
 - [ ] **Type Casting & Conversions**
   - Implicit vs. Explicit casting (Widening/Narrowing).
   - String to Primitive conversions (Parsing).
-- [ ] **Arrays & ArrayLists**
-  - Handling fixed-size arrays and dynamic `ArrayList` collections.
 - [ ] **OOP Deep Dive**
   - Inheritance (extends), Polymorphism, and Interfaces.
-- [ ] **Exception Handling**
-  - `try-catch-finally` blocks and robust error management.
+- [ ] **ArrayLists & Collections**
+  - Dynamic `ArrayList` usage and collection fundamentals.
+- [ ] **Advanced Exception Scenarios**
+  - `throw`, `throws`, and more robust error propagation patterns.
 
 ## 🛠️ Technical Stack
 
 - **Language:** Java 21 (LTS)
 - **IDE:** Eclipse IDE
-- **Source Material:** Deitel & Deitel - _Java How to Program_.
+- **Source Material:** Deitel & Deitel - _Java How to Program_ and in-repo practice exercises.
 
 ## 👤 Author
 
@@ -73,4 +90,4 @@ This repository documents my progress in **Java SE 21** and **Object-Oriented Pr
 
 ---
 
-_Last Updated: March 23, 2026_
+_Last Updated: April 10, 2026_
