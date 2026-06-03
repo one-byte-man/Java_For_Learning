@@ -30,7 +30,7 @@ public class Lesson10 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 	    int[] serverData = {10, 20, 30, 0, 50};
-	
+
 	    try {
 	        System.out.print("Enter the data index to access (0-4): ");
 	        int index = scanner.nextInt();
@@ -57,5 +57,6 @@ public class Lesson10 {
     
 	    System.out.println("Status: Program continues running smoothly...");
 	}
+	
 
 }

@@ -8,9 +8,9 @@ public class Lesson5 {
 		 * ---------------------------------------------------------
 		 * FOR      : Best when the number of iterations is KNOWN.
 		 * Structure: for(initialization; condition; update)
-		 * * WHILE    : Best when the number of iterations is UNKNOWN.
+		 * WHILE    : Best when the number of iterations is UNKNOWN.
 		 * Checks the condition BEFORE executing the block.
-		 * * DO-WHILE : Similar to while, but executes the block AT LEAST ONCE.
+		 * DO-WHILE : Similar to while, but executes the block AT LEAST ONCE.
 		 * Checks the condition AFTER executing the block.
 		 * ---------------------------------------------------------
 		 * Keywords:
@@ -24,6 +24,9 @@ public class Lesson5 {
 		System.out.println("FOR");
 		
 		for (int i = 0; i < 5; i++) {
+		    System.out.println("Number: " + i);
+		}
+		for (int i = 0; i < 5; ++i) {
 		    System.out.println("Number: " + i);
 		}
 		System.out.println("*************************");
