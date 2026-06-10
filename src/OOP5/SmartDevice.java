@@ -1,7 +1,7 @@
 package OOP5;
 
 /**
- * JAVA POLYMORPHISM & INTERFACES (QUICK REF)
+ * JAVA POLYMORPHISM & INTERFACES
  * ---------------------------------------------------------
  * WHAT : Building extensible systems using "programming in the general".
  * WHY  : Allows processing objects of various classes through the same superclass/interface reference.

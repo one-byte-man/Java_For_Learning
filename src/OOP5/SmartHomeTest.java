@@ -4,45 +4,45 @@ public class SmartHomeTest {
 
     public static void main(String[] args) {
         
-        // 1. POLYMORPHISM: Abstract reference array holding Concrete objects
+        // 1. INTERFACE STATIC METHOD TEST
+        // We call this directly via the Interface name, without creating any object.
+        boolean isPowerOn = IControllable.checkPowerGrid();
+        if (!isPowerOn) {
+            System.out.println("No power. System shutdown.");
+            return;
+        }
+
+        // 2. PRIVATE CONSTRUCTOR / SINGLETON TEST
+        // SmartHomeHub hub = new SmartHomeHub(); // This would cause a Compilation Error!
+        System.out.println("\n=== Booting Hub ===");
+        SmartHomeHub mainHub = SmartHomeHub.getInstance(); 
+        
+        // Let's call it again to prove it doesn't run the constructor twice
+        SmartHomeHub sameHub = SmartHomeHub.getInstance(); 
+
+        // 3. POLYMORPHISM
         SmartDevice[] myHome = new SmartDevice[3];
         myHome[0] = new SmartLight("Living Room Light", 80);
         myHome[1] = new SmartCamera("Garden Camera", 2.5);
         myHome[2] = new SmartLight("Bedroom Light", 30);
 
-        System.out.println("=== Smart Home System Initialized ===\n");
+        mainHub.runDiagnostics(myHome);
 
-        // 2. POLYMORPHIC PROCESSING
+        System.out.println("\n=== Standard Polymorphic Processing ===\n");
+
         for (SmartDevice device : myHome) {
             
-            // Turn on all devices using the IControllable interface method
             device.turnOn();
             
-            // 3. DOWNCASTING: Accessing specific methods of SmartCamera
+            // DOWNCASTING
             if (device instanceof SmartCamera) {
                 SmartCamera cam = (SmartCamera) device; 
-                cam.startRecord(); // Triggers the newly added method
+                cam.startRecord(); 
             }
             
-            // DOWNCASTING: Accessing specific methods of SmartLight
-            if (device instanceof SmartLight) {
-                SmartLight light = (SmartLight) device;
-                if (light.getBrightness() > 50) {
-                    System.out.println("Warning: " + light.getDeviceName() + " is too bright. Consider energy saving.");
-                }
-            }
-
-            // 4. DYNAMIC BINDING: Executes the overridden performAction() based on the actual object type
+            // DYNAMIC BINDING
             device.performAction();
             System.out.println("----------------------------------");
-        }
-        
-        // 5. TESTING STATE CHANGE (stopRecord)
-        System.out.println("\n=== Event: Motion Stopped in Garden ===");
-        if (myHome[1] instanceof SmartCamera) {
-            SmartCamera cam = (SmartCamera) myHome[1];
-            cam.stopRecord();
-            cam.performAction(); // Verify the state changed to "not recording"
         }
     }
 }
