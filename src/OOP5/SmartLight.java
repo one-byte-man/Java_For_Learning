@@ -20,6 +20,12 @@ public class SmartLight extends SmartDevice{
 		this.brightness = level;
 	}
 	
+	public void setBrightness(double level) {
+		if(level < 0) level = 0;
+		else if(level > 1) level = 100;
+		this.brightness = (int)(level*100);
+	}
+	
 	public int getBrightness() {return brightness;}
 	
 	@Override

@@ -16,7 +16,7 @@ package OOP5;
  * - instanceof  : if (myUnit instanceof Cavalry) { ... } // Type checking at runtime
  * - Downcasting : Cavalry c = (Cavalry) myUnit; // Forcing superclass ref to subclass ref
  * ---------------------------------------------------------
- * Notes & Gotchas (Critical Errors):
+ * Notes:
  * 1. Instantiation : You CANNOT instantiate abstract classes or interfaces (e.g., new Unit() -> Error).
  * 2. Multiplicity  : A class can 'extend' only ONE class, but can 'implement' MULTIPLE interfaces.
  * 3. Cast Crash    : ALWAYS use 'instanceof' before downcasting. Otherwise, it may throw ClassCastException.

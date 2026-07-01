@@ -3,7 +3,7 @@ package OOP5;
 public interface IControllable {
 	
 	/**
-	 * JAVA ADVANCED OOP (QUICK REF)
+	 * JAVA ADVANCED OOP
 	 * ---------------------------------------------------------
 	 * PRIVATE CONSTRUCTORS:
 	 * - Syntax: private ClassName() { ... }
